@@ -13,32 +13,70 @@
   gtag('config', 'G-NVCCP9HPCF');
 </script>
 
-<style>
-#active {
-  font-weight: bold; text-decoration: underline;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
-h1 {
-  font-size: 38px;
-  text-align: center;
-}
-</style>
+  <style>
+    #active {
+      font-weight: bold; text-decoration: underline;
+    }
+    body {
+      margin:0;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 38px;
+      text-align: center;
+      border-bottom:1px solid gray;
+      padding: 15px;
+      margin: 0;
+    }
+    #grid ul{
+      border-right: 1px solid gray;
+      width: 100px;
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: 145px 1fr;
+    }
+    #content{
+      padding: 20px;
+    }
+    @media(max-width: 500px){
+      #grid{
+        display:block;
+      }
+      #grid ul{
+        border-right:none;
+      }
+    }
+
+  </style>
 
 </head>
 
 <body>
   <h1><a href="index.html">해달별</a></h1>
-  <ul>
-    <li><a href="1.html">햇님</a></li>
-    <li><a href="2.html" id="active">달님</a></li>
-    <li><a href="3.html">별님</a></li>
-  </ul>
-  <h2>달님</h2>
-  <img src="달님화보장인.jpg" width="100%">
-  <p>달님이는 세 형제 중에 가장 막내일 것으로 예상된다. 처음 집에 왔을 때 가장 덩치가 작았고 가장 겁이 많아서 경계를 오래했다. 약 2주간 얼굴만 보면 하악질을 했고 3주째에 마음을 열었다. 처음에는 달님이가 경계하느라 밥도 먹지 않아서 하악질할 때 츄르 짠 숟가락을 입안에 넣어 처음 먹였다. 성격과 비슷하게 목소리도 가장 얇고 힘이 없다. 마냥 그렇지는 않지만 해달별 내에서 가냘픈 캐릭터다.</p>
+
+  <div id="grid">
+    <ul>
+      <li><a href="1.html">햇님</a></li>
+      <li><a href="2.html" id="active">달님</a></li>
+      <li><a href="3.html">별님</a></li>
+    </ul>
+
+  <div id="content">
+    <h2>달님</h2>
+
+    <img src="달님화보장인.jpg" width="100%">
+
+    <p>달님이는 세 형제 중에 가장 막내일 것으로 예상된다. 처음 집에 왔을 때 가장 덩치가 작았고 가장 겁이 많아서 경계를 오래했다. 약 2주간 얼굴만 보면 하악질을 했고 3주째에 마음을 열었다. 처음에는 달님이가 경계하느라 밥도 먹지 않아서 하악질할 때 츄르 짠 숟가락을 입안에 넣어 처음 먹였다. 성격과 비슷하게 목소리도 가장 얇고 힘이 없다. 마냥 그렇지는 않지만 해달별 내에서 가냘픈 캐릭터다.</p>
+  </div>
+</div>
+
 
   <div id="disqus_thread"></div>
   <script>
