@@ -1,0 +1,39 @@
+body {
+  margin:0;
+}
+#active {
+  font-weight: bold; text-decoration: underline;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+h1 {
+  font-size: 38px;
+  text-align: center;
+  border-bottom:1px solid gray;
+  padding: 15px;
+  margin: 0;
+}
+#grid ul{
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#grid{
+  display: grid;
+  grid-template-columns: 145px 1fr;
+}
+#content{
+  padding: 20px;
+}
+@media(max-width: 500px){
+  #grid{
+    display:block;
+  }
+  #grid ul{
+    border-right:none;
+  }
+}
