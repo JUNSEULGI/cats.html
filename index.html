@@ -10,7 +10,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-NVCCP9HPCF');
 </script>
 
@@ -29,6 +28,14 @@
     </ul>
 
     <div id="content">
+      <input type="button" value="야간모드" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+      <input type="button" value="해제" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        ">
       <h2>해달별</h2>
       <img src="해달별아기.jpg" width="100%">
       <p>
