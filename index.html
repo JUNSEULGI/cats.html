@@ -28,13 +28,16 @@
     </ul>
 
     <div id="content">
-      <input type="button" value="야간모드" onclick="
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        ">
-      <input type="button" value="해제" onclick="
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
+      <input id="밤낮" type="button" value="야간모드" onclick="
+        if(document.querySelector('#밤낮').value === '야간모드') {
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#밤낮').value='해제';
+        } else {
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          document.querySelector('#밤낮').value='야간모드';
+        }
         ">
       <h2>해달별</h2>
       <img src="해달별아기.jpg" width="100%">
