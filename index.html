@@ -15,6 +15,33 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <script>
+    function nightdayhandler(self){
+      var target = document.querySelector('body');
+      if(self.value === '야간모드') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        self.value=' 해제 ';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        self.value='야간모드';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'lightpink';
+            i = i + 1;
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -29,15 +56,7 @@
 
     <div id="content">
       <input type="button" value="야간모드" onclick="
-        if(this.value === '야간모드') {
-          document.querySelector('body').style.backgroundColor='black';
-          document.querySelector('body').style.color='white';
-          this.value=' 해제 ';
-        } else {
-          document.querySelector('body').style.backgroundColor='white';
-          document.querySelector('body').style.color='black';
-          this.value='야간모드';
-        }
+        nightdayhandler(this)
         ">
       <h2>해달별</h2>
       <img src="해달별아기.jpg" width="100%">
